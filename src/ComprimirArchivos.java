@@ -41,15 +41,24 @@ public class ComprimirArchivos {
             e.printStackTrace();
         }//Fin try-catch
             int exitCode = p.waitFor();
-            if (exitCode == 0) {
-                System.out.println("Archivos comprimidos exitosamente en " + archivoTar);
-            } else {
-                System.out.println("Error al comprimir los archivos. Código de salida: " + exitCode);
-            }//Fin if
-    }catch(IOException| InterruptedException e) {
+            comprobarComprimido(exitCode, archivoTar);
+        }catch(IOException| InterruptedException e) {
         e.printStackTrace();
     }//Fin try-catch
 }//Fin main
+
+    /**
+     * Metodo que comprueba si se ha comprimidos los archivos correctamente
+     * @param exitCode-Codigo de salida del comando
+     * @param archivoTar-Ruta donde va estar el archivo.tar
+     */
+    private static void comprobarComprimido(int exitCode, String archivoTar) {
+        if (exitCode == 0) {
+            System.out.println("Archivos comprimidos exitosamente en " + archivoTar);
+        } else {
+            System.out.println("Error al comprimir los archivos. Código de salida: " + exitCode);
+        }//Fin if
+    }
 
     /**
      * Metodo que verifica la existencia de los archivos y los crea si no existen
