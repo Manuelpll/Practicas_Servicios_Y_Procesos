@@ -11,6 +11,12 @@ import java.io.OutputStreamWriter;
  * @date 14/10/24
  */
 public class EjecutorComandos {
+    /**
+     * Metodo principal que ejecuta el codigo
+     * @param args-Los argumentos de la linea de comandos
+     * @throws IOException-Si falla la entrada o la salida del archivo
+     * @throws InterruptedException-Si el proceso se interumpe
+     */
     public static void main(String[] args) throws IOException, InterruptedException {
         //Zona de inicializacion :
         EjecutorComandos e = new EjecutorComandos();
@@ -34,8 +40,8 @@ public class EjecutorComandos {
      * Metodo que ejecuta un comando  y
      * luego devuelve el codigo de salida si esta bien 0 y si no -3
      * @param comando-El comando que quieres ejecutar
-     * @return -El codigo de salida
-     * @throws IOException Si  se mete un input incorrecto
+     * @return El codigo de salida
+     * @throws IOException Si se mete un input incorrecto
      * @throws InterruptedException Si se interrumpe el proceso antes de terminarlo
      */
     public int ejecutarComando(String comando)  {
@@ -80,9 +86,9 @@ public class EjecutorComandos {
     /**
      *Metodo que ejecuta un comando , escribe la salida de ese comando en un fichero y
      * luego devuelve el codigo de salida si esta bien 0 y si no -3
-     * @param comando
-     * @param archivoSalida
-     * @return
+     * @param comando-El comando que quieres ejecutar
+     * @param archivoSalida-El archivo que contendra la salida del comando
+     * @return El codigo de salida
      * @throws IOException Si  se mete un input incorrecto
      * @throws InterruptedException Si se interrumpe el proceso antes de terminarlo
      */
