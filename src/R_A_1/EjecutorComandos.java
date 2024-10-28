@@ -1,3 +1,5 @@
+package R_A_1;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
@@ -20,7 +22,7 @@ public class EjecutorComandos {
     public static void main(String[] args) throws IOException, InterruptedException {
         //Zona de inicializacion :
         EjecutorComandos e = new EjecutorComandos();
-        File fichero = new File("src\\salida.txt");
+        File fichero = new File("src\\R_A_1\\salida.txt");
         //Zona de salida
 
         //Ejemplo 1:

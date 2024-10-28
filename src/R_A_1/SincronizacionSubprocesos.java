@@ -1,3 +1,5 @@
+package R_A_1;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,8 +18,8 @@ public class SincronizacionSubprocesos {
      */
     public static void main(String[] args) {
       //Zona Inicializacion
-        String archivo1="src\\archivo1.txt";
-        String archivo2="src\\archivo2.txt";
+        String archivo1="src\\R_A_1\\archivo1.txt";
+        String archivo2="src\\R_A_1\\archivo2.txt";
         try{
             int todasLasLineas = ejecutarEnPowerShell("Get-Content " + archivo1 + " | Measure-Object -Line");
             int totalDePalabras = ejecutarEnPowerShell("Get-Content " + archivo2 + " | Measure-Object -Word");

@@ -1,3 +1,5 @@
+package R_A_1;
+
 import java.io.*;
 
 /**
@@ -16,8 +18,8 @@ public class ComprimirArchivos {
     public static void main(String[] args) throws IOException {
         //Zona de inicializacion
         String archivoTar = "src/comprimidos.tar";
-        String[] archivosAcomprimir = {"src/archivo1.txt",
-                "src/archivo2.txt", "src/archivo3.txt"};//Aqui situas los archivos que quieres comprimir
+        String[] archivosAcomprimir = {"src\\R_A_1\\archivo1.txt",
+                "src\\R_A_1\\archivo2.txt", "src\\R_A_1\\archivo3.txt"};//Aqui situas los archivos que quieres comprimir
         existenLosArchivos(archivosAcomprimir);//Verificacion de la existencia de los archivos
         //Zona de Ejecucion
         try {
